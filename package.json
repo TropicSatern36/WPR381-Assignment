@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "node": "^18.20.3",
+    "node-fetch": "^2.7.0",
     "spotify-web-api-node": "^5.0.2"
   }
 }
