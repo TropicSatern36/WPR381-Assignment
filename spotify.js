@@ -52,4 +52,15 @@ const spotify = {
 
 module.exports = spotify;
 
-console.log(spotify.credentials("client.json"));
+
+async function main() {
+    try {
+        const token = await spotify.credentials('client.json');
+        console.log(token);
+        spotify.artistAlbums('43ZHCT0cAZBISjO8DG9PnE');
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+main();
