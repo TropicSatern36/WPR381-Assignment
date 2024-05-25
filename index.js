@@ -6,7 +6,7 @@ async function main(search) {
         let tracks = await spotify.searchTrack(search);
 
         tracks.forEach((track) => {
-            console.error("Name: \n\t" + track.name);
+            console.log("Name: \n\t" + track.name);
             console.log("Artist:\n\t" + track.artist);
             console.log("Preview:\n\t" + track.preview_url);
             console.log("Album:\n\t" + track.album.name);
