@@ -40,7 +40,6 @@ const spotify = {
             }
             // Get json object containing token information
             const json = await response.json();
-            console.log('Access token: ' + json.access_token);
 
             // Write token to console
             spotifyApi.setAccessToken(json.access_token);
