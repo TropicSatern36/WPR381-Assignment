@@ -1,9 +1,12 @@
+const { setTimeout } = require("timers/promises");
 const spotify = require("./spotify");
 
 const prompt = require('prompt-sync')();
-console.log('Enter a song title:');
-const title = prompt();
-
+function input() {
+    console.log('Enter a song title:');
+    const title = prompt();
+    return title;
+}
 async function main(search) {
     try {
         await spotify.credentials('client.json');
@@ -23,5 +26,6 @@ async function main(search) {
     }
 }
 
-main(title);  
+main(input());
 // main('Diggy Diggy Hole');
+
