@@ -1,5 +1,9 @@
 const spotify = require("./spotify");
 
+const prompt = require('prompt-sync')();
+console.log('Enter a song title:');
+const title = prompt();
+
 async function main(search) {
     try {
         await spotify.credentials('client.json');
@@ -19,4 +23,5 @@ async function main(search) {
     }
 }
 
-main('Diggy Diggy Hole');
+main(title);  
+// main('Diggy Diggy Hole');
