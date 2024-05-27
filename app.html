@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    to find songs from spotify
+<title>Song Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        #search-form {
+            max-width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #search-input {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+        }
+        
+        #search-input:focus {
+            border-color: #aaa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        
+        #results {
+            margin-top: 20px;
+        }
+        
+        #results ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #results li {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        #results li:hover {
+            background-color: #f7f7f7;
+        }
+        
+        #results h2 {
+            margin-top: 0;
+        }
+        
+     .song-details {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+     .song-details.show {
+            display: block;
+        }
+        
+        #token {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Song Finder</h1>
+    <form id="search-form">
+        <input type="text" id="search-input" name="q" placeholder="Search for a song on spotify...">
+        <button type="submit">Search</button>
+    </form>
+    <div id="results">
+        <ul id="results-list">
+            <!-- Results will be displayed here -->
+        </ul>
+    </div>
+    <div id="token">
+        <p>Access token: <span id="access-token"></span></p>
+    </div>
+    <script src="spotify.js"></script>
+</body>
+</html>
